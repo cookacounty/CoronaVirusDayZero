@@ -1,6 +1,8 @@
 addpath Enumerations/
 addpath Busses/
 addpath SimulinkReferences/
+addpath functions
 
-BusDefinitions
+%BusDefinitions
 ProbabilityDistributions
+SocialDistancingFunction
