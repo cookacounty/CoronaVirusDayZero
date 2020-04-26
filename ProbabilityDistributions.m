@@ -1,7 +1,7 @@
 %% This file defines the probablity distrubutions
 
 global num;
-num = 10000;
+num = 100000;
 
 prob.asymptomatic = 0.20;
 

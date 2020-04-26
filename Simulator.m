@@ -45,13 +45,13 @@ error('Done')
 stats_t = struct2table(stats);
 figure; 
 subplot(4,2,1); plot(tidxs,stats_t.numInfected); legend('Infected')
-subplot(4,2,3); plot(tidxs,stats_t.numImmune); legend('Immune')
-subplot(4,2,5); plot(tidxs,stats_t.numDeceased); legend('Deceased')
+subplot(4,2,3); plot(tidxs,stats_t.numMedical); legend('Hospitalizations')
+subplot(4,2,5); plot(tidxs,socialDistancing(1:tsim)); legend('Social Distancing Inverse Effort')
 subplot(4,2,7); plot(tidxs(2:end),stats_t.numInfected(2:end)-stats_t.numInfected(1:(end-1))); legend('Infected rate/day');
 
-subplot(4,2,2); plot(tidxs,stats_t.numMedical); legend('Hospitalizations')
-subplot(4,2,4); plot(tidxs,socialDistancing(1:tsim)); legend('Social Distancing Effort')
 
+subplot(4,2,2); plot(tidxs,stats_t.numImmune); legend('Immune')
+subplot(4,2,4); plot(tidxs,stats_t.numDeceased); legend('Deceased')
 
 %%
 
