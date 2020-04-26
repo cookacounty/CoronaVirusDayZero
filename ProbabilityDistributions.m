@@ -13,8 +13,8 @@ prob.gain_immunity = 0.2; % Chance to gain immunity after recovery
 prob.fatality =  96/1800; % Probability of death after infection
 
 % Normal Gaussean Distributions [mean,sigma]
-normal.symptom_time = [7 1.5] ; % Time to develope symptoms (if not asymptomatic
-normal.infection_time = [14 1.5]; % Time the infection will last
+normal.symptom_time = [14 1.5] ; % Time to develope symptoms (if not asymptomatic)
+normal.infection_time = [30 3]; % Time the infection will last
 
 % Normal Gaussen Distrubtions for interaction (each day). 
 % These match the EnumQuarintine enumerated types

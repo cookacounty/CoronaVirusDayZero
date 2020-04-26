@@ -1,4 +1,4 @@
-function ns = PatienHealth(cs,events,prob,normal)
+function ns = PatientHealth(cs,events,prob,normal)
 
 
 ns = cs;
@@ -44,10 +44,7 @@ switch cs.PatientState
         end
         
         ns.timerInfected = cs.timerInfected + 1;
-        
-        if ns.timerInfected > 25
-           keyboard 
-        end
+
     case "Immune"
         ns.isImmune = true;
         

@@ -10,7 +10,7 @@ for p = 1:num
     if initCond.infected(p)
         cs = PatientStates(p);
         ev.Infected = true;
-        PatientStates(p)  = PatienHealth(cs,ev,prob,normal);
+        PatientStates(p)  = PatientHealth(cs,ev,prob,normal);
     end
 end
 
@@ -31,7 +31,7 @@ for tidx = tidxs
     for p = 1:num
         cs = PatientStates(p);
         ev = events(p);
-        PatientStates(p) = PatienHealth(cs,ev,prob,normal);
+        PatientStates(p) = PatientHealth(cs,ev,prob,normal);
     end
    if mod(tidx,10) == 1
       fprintf('Sim Time %d Infections %d\n',tidx,stats(tidx).numInfected); 
