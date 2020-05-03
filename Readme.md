@@ -40,5 +40,37 @@ Even if we had things like a vaccine today, it would still take time to immunize
 |                |            | False ? Person is not immune                                                                                  |
 | tInfected      | Time       | The time a person has been infected.                                                                          |
 
+# Events
+| Name          | Description                                                          |
+|---------------|----------------------------------------------------------------------|
+| Infected      | Is the person contacted by someone with the virus and gets infected  |
+| Immunized     | A healthy person can be immunized and gain immunity                  |
+| GainsImmunity | recovery a person can become immune                                  |
 
 
+# Statistical Parameters
+| Name                | Type    | Values                                                                                                                                         |
+|---------------------|---------|------------------------------------------------------------------------------------------------------------------------------------------------|
+| probInfec           | Percent | The probability the person will be infected when contacted.                                                                                    |
+|                     |         |                                                                                                                                                |
+| probAsymptomatic    | Percent | The probability the person will be asymptomatic when infected.                                                                                 |
+|                     |         |                                                                                                                                                |
+| probDuration        | Percent | The probability of the time a person will be infected. If the duration exceeds defined length the person will die (unless a healthy carrier).  |
+| probInnaiteImmunity | Percent | The probability a patient is immune (starting)                                                                                                 |
+| probGainImmunity    | Percent | The probability a patient can gain immunity after infection                                                                                    |
+| probVaccination     | Percent | The probability a patient gains immunity after vacination                                                                                      |
+## Assumptions
+* •	Terminal patients are always symptomatic
+
+
+
+# Future Considerations
+
+Superspreader – A patient who could spread to an unusually large number of other patients
+Asymptomatic Carriers – Currently the model assumes this is a constant. It may be possible an individual responds differently to multiple exposures.
+Region – Split patients into different regions allowing simulation of regional isolation
+
+# Future properties
+
+| iRegion | Integer | An integer value of the region a person is in. Regional quarantine allows no interaction between people outside of region |
+|---------|---------|---------------------------------------------------------------------------------------------------------------------------|
